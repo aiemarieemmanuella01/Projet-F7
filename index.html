@@ -1,60 +1,72 @@
 <!doctype html>
 <html lang="fr">
-    <head>
-        <meta charset="utf-8" />
-        <meta
-            name="viewport"
-            content="width=device-width, initial-scale=1, maximum-scale=1, minimum-scale=1, viewport-fit=cover"
-        />
-        <meta name="theme-color" content="#e8590c" />
-        <title>Ma ToDo</title>
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, minimum-scale=1, viewport-fit=cover">
+    <meta name="theme-color" content="#A89078">
+    <title>Ma ToDo</title>
 
-        <!-- Framework7 (CSS) -->
-        <link rel="stylesheet" href="lib/framework7-bundle.min.css" />
-        <!-- Police d'icônes Framework7 -->
-        <link
-            rel="stylesheet"
-            href="lib/framework7-icons/css/framework7-icons.css"
-        />
-        <!-- Styles de l'application -->
-        <link rel="stylesheet" href="css/app.css" />
-    </head>
-    <body>
-        <div id="app">
-            <div class="view view-main view-init safe-areas">
-                <div class="page">
-                    <!-- Barre de navigation (haut) -->
-                    <div class="navbar">
-                        <div class="navbar-bg"></div>
-                        <div class="navbar-inner">
-                            <div class="title">Ma ToDo</div>
-                        </div>
-                    </div>
+    <link rel="stylesheet" href="lib/framework7-bundle.min.css">
+    <link rel="stylesheet" href="lib/framework7-icons/css/framework7-icons.css">
 
-                    <div class="page-content">
-                        <!-- =====================================================
-               SÉANCE 1 : afficher ici une liste de tâches EN DUR
-                 (composant "list" avec des cases à cocher).
+    <link rel="stylesheet" href="css/app.css">
+</head>
 
-               SÉANCE 2 : ajouter un champ + un bouton, puis
-                 générer la liste à partir d'un tableau JS
-                 (voir js/app.js). Ajouter / supprimer une tâche.
+<body>
+<div id="app">
+    <div class="view view-main view-init safe-areas">
+        <div class="page page-beige">
 
-               SÉANCE 3 : cocher/décocher, compteur, filtres,
-                 puis sauvegarde avec localStorage.
-               ===================================================== -->
-                        <div class="block">
-                            <p class="text-color-gray">
-                                À compléter pendant les séances.
-                            </p>
-                        </div>
-                    </div>
+            <div class="navbar">
+                <div class="navbar-bg chic-navbar"></div>
+                <div class="navbar-inner">
+                    <div class="title chic-title">Ma ToDo</div>
                 </div>
             </div>
-        </div>
 
-        <!-- Framework7 (JS) -->
-        <script src="lib/framework7-bundle.min.js"></script>
-        <script src="js/app.js"></script>
-    </body>
+            <div class="page-content">
+
+                <div class="block">
+                    <div class="segmented segmented-raised">
+                        <a class="button button-active filtre-btn" data-filtre="toutes">Toutes</a>
+                        <a class="button filtre-btn" data-filtre="afaire">À faire</a>
+                        <a class="button filtre-btn" data-filtre="faites">Faites</a>
+                    </div>
+                </div>
+
+                <div class="block-title compteur chic-compteur"></div>
+
+                <div class="list chic-list">
+                    <ul class="liste-taches">
+                        </ul>
+                </div>
+
+                <div class="list chic-list">
+                    <ul>
+                        <li class="item-content item-input">
+                            <div class="item-inner">
+                                <div class="item-input-wrap">
+                                    <input type="text" id="champ-tache" placeholder="Nouvelle tâche...">
+                                </div>
+                            </div>
+                        </li>
+                    </ul>
+                </div>
+
+                <div class="block">
+                    <a href="#" class="button button-fill button-large chic-btn" id="btn-ajouter">
+                        Ajouter
+                    </a>
+                </div>
+
+            </div>
+        </div>
+    </div>
+</div>
+
+<script src="lib/framework7-bundle.min.js"></script>
+<script src="js/app.js"></script>
+
+</body>
+</html>
 </html>
