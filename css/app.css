@@ -2,16 +2,89 @@
    Ma ToDo — styles de l'application
    ============================================================ */
 
-/* Couleur principale du thème (orange) */
 :root {
-    --f7-theme-color: #e8590c;
-    --f7-theme-color-rgb: 232, 89, 12;
-    --f7-theme-color-shade: #cf5009;
-    --f7-theme-color-tint: #f06a1e;
+    
+    --f7-theme-color: #A89078;
+    --f7-theme-color-rgb: 168, 144, 120;
+    --f7-theme-color-shade: #8C7A6B;
+    --f7-theme-color-tint: #C4B09E;
+    
+    
+    --page-bg-color: #F9F6F0; 
+    --card-bg-color: #FFFFFF;
+    --text-primary: #4A4036; 
 }
+
+
+.page-beige {
+    background-color: var(--page-bg-color);
+}
+
+
+.chic-navbar {
+    background-color: var(--card-bg-color);
+    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.03);
+}
+
+.chic-title {
+    color: var(--text-primary);
+    font-weight: 600;
+    letter-spacing: 0.5px;
+}
+
 
 .page-content {
-    padding-bottom: 16px;
+    padding-bottom: 30px;
 }
 
+
+.chic-list {
+    margin: 16px;
+    border-radius: 12px;
+    background-color: var(--card-bg-color);
+    box-shadow: 0 4px 12px rgba(168, 144, 120, 0.08);
+    overflow: hidden;
+}
+
+.chic-list ul {
+    background: transparent;
+}
+
+
+.item-title {
+    color: var(--text-primary);
+    font-size: 16px;
+    font-weight: 500;
+}
 /* SÉANCE 3 : ajouter ici le style de la tâche cochée (texte barré) */
+
+.tache-faite { 
+    text-decoration: line-through; 
+    color: #C4B09E; 
+    transition: all 0.3s ease;
+}
+
+
+.chic-compteur {
+    color: var(--f7-theme-color-shade);
+    text-transform: uppercase;
+    font-size: 12px;
+    letter-spacing: 1px;
+    margin-top: 20px;
+}
+
+
+.chic-btn {
+    border-radius: 8px;
+    font-weight: 600;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+    box-shadow: 0 4px 10px rgba(168, 144, 120, 0.3);
+}
+
+
+.checkbox i {
+    border-radius: 6px; 
+}
+
+
